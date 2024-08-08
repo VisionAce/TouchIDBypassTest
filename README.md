@@ -1,8 +1,8 @@
 ## 📸 Screenshots
 
-<img width="300" height="600" src="https://github.com/VisionAce/Screenshoots/blob/main/Simulator%20Screen%20Recording%20-%20iPhone%2015%20Pro%20Max%20-%202023-12-19%20at%2016.26.23.gif"/>
+<img width="300" height="600" src="https://youtu.be/uV9fKjWspJA"/>
 
-<img width="600" height="300" src="https://github.com/VisionAce/Screenshoots/blob/main/螢幕錄影%202024-08-08%20晚上10.05.55.mov"/>
+<img width="600" height="300" src="https://youtube.com/shorts/OssO0hMyIao"/>
 
 
 ## 參考連結
