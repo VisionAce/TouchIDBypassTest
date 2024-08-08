@@ -1,6 +1,6 @@
 ## 📸 Screenshots
 
-<img width="300" height="600" src="https://youtu.be/uV9fKjWspJA"/>
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/OssO0hMyIao/0.jpg)](https://www.youtube.com/watch?v=OssO0hMyIao)
 
 <img width="600" height="300" src="https://youtube.com/shorts/OssO0hMyIao"/>
 
