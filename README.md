@@ -1,5 +1,5 @@
 ## Keychain解決方案說明
-- [程式碼連結][3]
+- [程式碼參考連結][3]
 
 - AccessControl物件：在程式碼的第一部分，我們建立了SecAccessControl物件，它會使用當前的生物識別設定作為驗證的條件。這樣，即使在繞過指紋辨識的情況下，存取Keychain中的資料也無法輕易達成，因為這是透過SecAccessControl進行保護的。
 - Keychain保存：第二部分的程式碼將密碼以SecAccessControl物件保護的形式儲存到Keychain中。
