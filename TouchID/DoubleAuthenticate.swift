@@ -32,6 +32,7 @@ struct SecAccessControlView: View {
     
     func authenticateAndRetrievePassword() {
         let context = LAContext()
+        context.localizedReason = "Please, pass authorization to enter this area"
         var error: Unmanaged<CFError>?
         
         // 1. Create the AccessControl object that will represent authentication settings
@@ -69,7 +70,7 @@ struct SecAccessControlView: View {
             kSecReturnData as String: kCFBooleanTrue!,
             kSecAttrAccount as String: "OWASP Account" as CFString,
             kSecAttrLabel as String: "com.me.myapp.password" as CFString,
-            kSecUseOperationPrompt as String: "Please, pass authorisation to enter this area" as CFString
+            kSecUseAuthenticationContext as String: context
         ]
         
         let status = withUnsafeMutablePointer(to: &queryResult) {
@@ -78,14 +79,14 @@ struct SecAccessControlView: View {
         
         if status == errSecSuccess {
             if let passwordData = queryResult as? Data {
-                retrievedPassword = String(data: passwordData, encoding: .utf8)
-                isUnlocked = true
+                let retrievedPassword = String(data: passwordData, encoding: .utf8)
                 print("Successfully retrieved password: \(retrievedPassword!)")
             }
         } else {
             print("Authorization not passed or item not found: \(status)")
         }
     }
+
 }
 
 #Preview {
