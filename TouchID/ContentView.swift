@@ -12,6 +12,15 @@ struct ContentView: View {
     @State private var isUnclocked = false
     var body: some View {
         VStack {
+            Button {
+                isUnclocked = false
+            } label: {
+                HStack {
+                    Text ("reset")
+                    Image(systemName: "arrow.triangle.2.circlepath")
+                }
+            }.padding()
+            
             if isUnclocked {
                 Text("Unlocked")
                

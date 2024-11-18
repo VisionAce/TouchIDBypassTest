@@ -15,6 +15,15 @@ struct SecAccessControlView: View {
     
     var body: some View {
         VStack {
+            Button {
+                isUnlocked = false
+            } label: {
+                HStack {
+                    Text ("reset")
+                    Image(systemName: "arrow.triangle.2.circlepath")
+                }
+            }.padding()
+            
             if isUnlocked {
                 if let password = retrievedPassword {
                     Text("Unlocked: \(password)")
@@ -81,6 +90,7 @@ struct SecAccessControlView: View {
             if let passwordData = queryResult as? Data {
                 let retrievedPassword = String(data: passwordData, encoding: .utf8)
                 print("Successfully retrieved password: \(retrievedPassword!)")
+                isUnlocked = true
             }
         } else {
             print("Authorization not passed or item not found: \(status)")
