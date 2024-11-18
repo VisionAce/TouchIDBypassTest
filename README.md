@@ -18,7 +18,9 @@
 ## 參考連結
 - [OWASP][1]
 - [解決方案][2]
+- [Apple官方文件][4]
 
 [1]: https://mas.owasp.org/MASTG/tests/ios/MASVS-AUTH/MASTG-TEST-0064/
 [2]: https://github.com/OWASP/owasp-mastg/blob/master/Document/0x06f-Testing-Local-Authentication.md#local-authentication-framework
 [3]: https://github.com/VisionAce/TouchIDBypassTest/blob/main/TouchID/DoubleAuthenticate.swift
+[4]: https://developer.apple.com/documentation/localauthentication/accessing-keychain-items-with-face-id-or-touch-id
