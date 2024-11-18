@@ -88,9 +88,9 @@ struct SecAccessControlView: View {
         
         if status == errSecSuccess {
             if let passwordData = queryResult as? Data {
-                let retrievedPassword = String(data: passwordData, encoding: .utf8)
-                print("Successfully retrieved password: \(retrievedPassword!)")
+                retrievedPassword = String(data: passwordData, encoding: .utf8)
                 isUnlocked = true
+                print("Successfully retrieved password: \(retrievedPassword!)")
             }
         } else {
             print("Authorization not passed or item not found: \(status)")
