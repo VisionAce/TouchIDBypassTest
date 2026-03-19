@@ -7,13 +7,14 @@
 
 **這種方法確保了即使攻擊者設法繞過簡單的驗證邏輯，也無法直接存取敏感的資料，因為這些資料受到系統級別的保護。**
 
-## 📸 YouTube Demo
+## 注意事項
+- [MASTG-TEST-0266][5] 不能用LAContext.evaluatePolicy,要用SecAccessControlCreateWithFlags
+- [MASTG-TEST-0270][6] 要用kSecAccessControlBiometryCurrentSet這個Flag
+<!-- ## 📸 YouTube Demo
 
-<!--[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/OssO0hMyIao/0.jpg)](https://www.youtube.com/watch?v=OssO0hMyIao)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/OssO0hMyIao/0.jpg)](https://www.youtube.com/watch?v=OssO0hMyIao)
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/uV9fKjWspJA/0.jpg)](https://www.youtube.com/watch?v=uV9fKjWspJA)-->
-
-
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/uV9fKjWspJA/0.jpg)](https://www.youtube.com/watch?v=uV9fKjWspJA) -->
 
 ## 參考連結
 - [OWASP][1]
@@ -24,3 +25,5 @@
 [2]: https://github.com/OWASP/owasp-mastg/blob/master/Document/0x06f-Testing-Local-Authentication.md#local-authentication-framework
 [3]: https://github.com/VisionAce/TouchIDBypassTest/blob/main/TouchID/DoubleAuthenticate.swift
 [4]: https://developer.apple.com/documentation/localauthentication/accessing-keychain-items-with-face-id-or-touch-id
+[5]: https://mas.owasp.org/MASTG/tests/ios/MASVS-AUTH/MASTG-TEST-0266/
+[6]: https://mas.owasp.org/MASTG/tests/ios/MASVS-AUTH/MASTG-TEST-0270/
